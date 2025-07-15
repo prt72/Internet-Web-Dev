@@ -1,0 +1,166 @@
+/* login.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --primary: #124578;       /* Bright pink */
+    --secondary: #00152a;     /* Dark blue */
+    --surface: #ffffff;       /* White background for the card */
+    --text: #333333;          /* Dark gray text */
+    --border: #e2e8f0;        /* Light gray border */
+    --accent: #5ea6f1;        /* Light blue accent color */
+    --shadow-light: rgba(0, 0, 0, 0.1);  /* Light shadow */
+    --shadow-dark: rgba(0, 0, 0, 0.2);   /* Darker shadow */
+}
+
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f9f9f9, #e0eafc); /* Soft gradient background */
+}
+
+/* Login Page Wrapper */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: calc(100vh - 60px);
+}
+
+/* Auth Container */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    min-height: calc(100vh - 60px);
+}
+
+.auth-card {
+    background: var(--surface);
+    border-radius: 12px;
+    box-shadow: 0 12px 30px var(--shadow-light);  /* Soft shadow for depth */
+    width: 100%;
+    max-width: 500px;
+    padding: 3rem 2rem;          /* Slight padding for a spacious feel */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.auth-card:hover {
+    transform: translateY(-5px);  /* Slight hover effect for the card */
+}
+
+.auth-card h2 {
+    color: var(--secondary);
+    font-family: 'Roboto', serif;
+    font-size: 2rem;           /* Increased size for better readability */
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    color: var(--text);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.form-group input {
+    width: 93%;
+    padding: 1rem;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background-color: #fafafa;  /* Soft background for inputs */
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 51, 102, 0.2);
+    background-color: #ffffff;  /* Highlight background on focus */
+}
+
+.auth-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 24px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100%;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;   /* Uppercase text for button */
+}
+
+.auth-btn:hover {
+    background: #00152a;
+    transform: translateY(-3px);  /* Slightly darker and lifted on hover */
+}
+
+.auth-footer {
+    margin-top: 1.5rem;
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.auth-footer a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.auth-footer a:hover {
+    color: #cc2952;
+    text-decoration: underline;
+}
+
+.alert-danger {
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.text-danger {
+    color: #ff4d4d;
+    font-size: 0.9em;
+    display: block;
+    margin-top: 5px;
+}
+
+.has-error input {
+    border-color: #ff4d4d;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 1.5rem;
+    }
+    
+    .auth-btn {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}

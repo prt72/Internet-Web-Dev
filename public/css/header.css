@@ -1,0 +1,108 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+/* CSS Variables */
+.guest-header {
+    --primary-color: #ff3366;
+    --secondary-color: #00152a;
+    --text-color: #ffffff;
+    --accent-color: #5ea6f1;
+}
+
+/* Header Container */
+.guest-header {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Flex Layout */
+.guest-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Logo */
+.guest-header .logo h1 {
+    color: #fff !important;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.guest-header .logo a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.guest-header .logo:hover h1 {
+    color: var(--primary-color);
+}
+
+/* Right Section */
+.guest-header .right-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Sign In / Register Buttons */
+.guest-header .auth-item .btn-sign-in,
+.guest-header .auth-item .btn-register {
+    background-color: #8fc9d0;
+    color: #000;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.guest-header .auth-item .btn-sign-in:hover,
+.guest-header .auth-item .btn-register:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.guest-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.guest-header nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .guest-header .container {
+        flex-wrap: wrap;
+    }
+
+    .guest-header .logo h1 {
+        font-size: 1.25rem;
+    }
+
+    .guest-header .right-section {
+        gap: 1rem;
+    }
+
+    .guest-header .auth-item .btn-sign-in,
+    .guest-header .auth-item .btn-register {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+}

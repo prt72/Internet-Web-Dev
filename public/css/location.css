@@ -1,0 +1,155 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.location-page {
+  padding: 2rem 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.alert-info {
+  background-color: #d1e7dd;
+  border-color: #badbcc;
+  color: #0f5132;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.alert-info .fa-map-marker-alt {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+/* Search Container */
+.search-container {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+#searchBox {
+  padding: 0.75rem 3rem 0.75rem 1.5rem;
+  border: 2px solid #ced4da;
+  border-radius: 25px;
+  font-size: 1rem;
+  width: 100%;
+  transition: border-color 0.3s;
+  outline: none;
+}
+
+#searchBox:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.25);
+}
+
+.search-container .btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0 25px 25px 0;
+  background: #0d6efd;
+  border: none;
+  padding: 0 1.5rem;
+  color: white;
+  font-size: 1rem;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.search-container .btn:hover {
+  background: #0b5ed7;
+}
+
+/* Map Styles */
+.leaflet-map {
+  height: 600px;
+  border-radius: 18px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin: 1.5rem 0;
+}
+
+/* Marker Styles */
+.store-marker .marker-dot {
+  width: 12px;
+  height: 12px;
+  background: #ff0000;
+  border-radius: 50%;
+  border: 1.5px solid #6a0000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.you-are-here-marker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.you-are-here-marker i {
+  font-size: 26px;
+  color: #00570e;
+}
+
+
+
+/* Popup Styles */
+.store-popup {
+  text-align: center;
+  padding: 0.75rem;
+}
+
+.store-popup h6 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+.store-popup .text-muted {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.search-result {
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #555;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .leaflet-map {
+      height: 400px;
+  }
+
+  .alert-info {
+      font-size: 0.9rem;
+      padding: 1rem;
+  }
+
+  #searchBox {
+      font-size: 0.9rem;
+  }
+
+  .search-container .btn {
+      padding: 0 1rem;
+      font-size: 0.9rem;
+  }
+}

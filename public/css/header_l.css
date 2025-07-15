@@ -1,0 +1,181 @@
+/*Everything is already nested - meaning only will be used in header_l.css*/
+
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+/* CSS Variables */
+.site-header {
+    --primary-color: #ff3366;
+    --secondary-color: #00152a;
+    --text-color: #ffffff;
+    --accent-color: #5ea6f1;
+}
+
+/* Base Header Styles */
+.site-header {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Container */
+.site-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Logo */
+.site-header .logo h1 {
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.site-header .logo a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.site-header .logo:hover h1 {
+    color: var(--primary-color);
+}
+
+/* Navigation */
+.site-header .main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.site-header .main-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    border-radius: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+.site-header .main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Right Section */
+.site-header .right-section {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Location Icon */
+.site-header .location-icon {
+    margin-right: 15px;
+}
+
+/* Profile Dropdown */
+.site-header .profile-dropdown {
+    position: relative;
+}
+
+/* Profile Button */
+.site-header .profile-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 1.4rem;
+}
+
+/* Font Awesome Icon Styling */
+.site-header .icon {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+}
+
+.site-header .icon:hover {
+    color: var(--primary-color);
+}
+
+/* Dropdown Styles */
+.site-header .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background-color: #fff;
+    color: #000;
+    min-width: 160px;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.site-header .dropdown-content a,
+.site-header .dropdown-content button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    background: none;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.site-header .dropdown-content a:hover,
+.site-header .dropdown-content button:hover {
+    background-color: #f2f2f2;
+}
+
+/* JS-controlled class for showing dropdown */
+.site-header .show-dropdown {
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .site-header .container {
+        flex-wrap: wrap;
+    }
+
+    .site-header .main-nav {
+        display: none; /* You could toggle this with JS for a mobile menu */
+    }
+
+    .site-header .logo h1 {
+        font-size: 1.25rem;
+    }
+
+    .site-header .right-section {
+        gap: 1rem;
+    }
+
+    .site-header .profile-btn {
+        font-size: 1.2rem;
+    }
+
+    .site-header .auth-item .btn-sign-in {
+        padding: 0.4rem 0.8rem;
+    }
+}

@@ -1,0 +1,178 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.main-content {
+  flex: 1;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgb(117, 156, 174);
+  color: white;
+  margin-top: auto;
+}
+
+body.modal-open {
+  padding-right: 0 !important;
+  overflow-y: auto !important;
+}
+
+.catalogue-page {
+  padding-top: 3rem;
+}
+
+.indicator-box {
+  background: #e6f7ff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem auto 2rem;
+  max-width: 800px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.indicator-item {
+  display: inline-block;
+  margin: 0 1rem;
+  font-size: 1.1rem;
+  color: #000000;
+}
+
+.filters-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.filters-row select,
+.filters-row input {
+  flex: 1 1 150px;
+  min-width: 120px;
+}
+
+.search-input {
+  position: relative;
+  flex: 1 1 200px;
+}
+
+.search-input input {
+  width: 100%;
+  padding-left: 2rem;
+}
+
+.search-input::before {
+  content: '\f002';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #0544b2;
+}
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-img-top {
+  height: 200px;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+}
+
+.card-details {
+  padding: 0.75rem;
+  min-height: 120px;
+}
+
+.card-details .figurine-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.card-details .category,
+.card-details .description {
+  font-weight: normal;
+  text-align: left;
+  margin: 0.3rem 0;
+}
+
+.emoji-badge {
+  font-size: 1.2rem;
+  background: transparent;
+  color: #333333;
+}
+
+.qty-badge {
+  font-weight: bold;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card-footer .btn {
+  margin: 0.2rem;
+}
+
+.qr-container {
+  padding: 20px;
+  border-radius: 10px;
+  background: #fdfdfd;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.qr-code {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+}
+
+.nav-tabs .nav-link {
+  border-radius: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: #61a9f5;
+  color: white;
+}
+
+.nav-tabs .nav-link:hover {
+  background-color: #f0f0f0;
+  color: #325780;
+}
+
+.pagination {
+  justify-content: center;
+}
+
+.page-item.active .page-link {
+  background-color: #61a9f5;
+  border-color: #61a9f5;
+}
+
+.page-link {
+  color: #325780;
+}

@@ -1,0 +1,162 @@
+/* CSS Variables for Easy Theme Customization */
+:root {
+  --primary-color: #357593;    /* Vibrant pink for accents */
+  --secondary-color: #00152a;  /* Dark blue for contrast */
+  --background-color: #f9f9f9; /* Light gray background */
+  --text-color: #333;         /* Dark gray text */
+  --light-blue: #eaf4ff;      /* Light blue for subtle highlights */
+}
+
+/* Global Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.guest-homepage .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Hero Section */
+.guest-homepage .hero {
+  position: relative;
+  height: 80vh;
+  background-image: linear-gradient(rgba(0, 21, 42, 0.7), rgba(0, 21, 42, 0.7)), url('/img/bg.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.guest-homepage .hero-content {
+  color: #fff;
+}
+
+.guest-homepage .hero-content h1 {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 1rem;
+}
+
+.guest-homepage .hero-content p {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Features Section */
+.guest-homepage .features {
+  position: relative;           /* new: allow absolute children */
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  text-align: center;
+}
+
+.guest-homepage .features h2 {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  z-index: 1;
+}
+
+.guest-homepage .features-grid {
+  display: grid;                          /* switch to CSS Grid */
+  grid-template-columns: repeat(3, 1fr);  /* exactly 3 columns */
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;                         /* center horizontally */
+  padding-top: 22vh;                      /* push it below the centered h2 */
+  box-sizing: border-box;
+}
+
+.guest-homepage .feature-card {
+  background-color: #fff;
+  width: 300px;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.guest-homepage .feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--primary-color);
+  transition: height 0.3s ease;
+}
+
+.guest-homepage .feature-card:hover::before {
+  height: 100%;
+  opacity: 0.1;
+}
+
+.guest-homepage .feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.guest-homepage .feature-card i {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.guest-homepage .feature-card:hover i {
+  transform: scale(1.1);
+}
+
+.guest-homepage .feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-color);
+}
+
+.guest-homepage .feature-card p {
+  color: #666;
+  margin: 0;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .guest-homepage .features h2 {
+    font-size: 2rem;
+  }
+
+  .guest-homepage .features-grid {
+    grid-template-columns: 1fr;
+    padding-top: 50vh;  /* adjust for smaller screens */
+  }
+
+  .guest-homepage .feature-card {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .guest-homepage .feature-card i {
+    font-size: 2.5rem;
+  }
+}
